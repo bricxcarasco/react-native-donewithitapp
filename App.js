@@ -1,24 +1,8 @@
 import React from 'react';
-import { StyleSheet, Button, Alert, SafeAreaView } from 'react-native';
+import { View } from 'react-native';
+import WelcomeScreen from './app/screens/WelcomeScreen';
 
 export default function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <Button 
-        color="orange"
-        title="Click me!" 
-        onPress={() => 
-          Alert.prompt("My title", "My Message", text => console.log(text))
-        } />
-    </SafeAreaView>
-  );
+  return <WelcomeScreen />;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
